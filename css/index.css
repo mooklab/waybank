@@ -1,0 +1,518 @@
+:root {
+  --section-side-gap: 50px;
+  --section-between-gap: 120px;
+  --header-height: 84px;
+}
+
+@media (max-width: 960px) {
+  :root {
+    --section-side-gap: 30px;
+    --section-between-gap: 100px;
+    --header-height: 64px;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --section-side-gap: 20px;
+    --section-between-gap: 80px;
+  }
+}
+section.main {
+  color: white;
+  position: relative;
+  margin-top: calc(var(--header-height) * -1);
+  padding-top: var(--section-between-gap);
+  padding-bottom: calc(var(--section-between-gap) / 3 * 2);
+  display: grid;
+  grid-template-rows: 1fr;
+  background-color: #272727;
+  height: min(100vh, 867px);
+}
+section.main div.container {
+  display: grid;
+  -ms-flex-line-pack: end;
+      align-content: end;
+  width: 100%;
+}
+section.main div.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+section.main div.background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section.main div.text {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  max-width: 832px;
+}
+section.main div.text h1 {
+  margin-bottom: 32px;
+}
+section.main div.text p {
+  font-size: 24px;
+  line-height: 1.25em;
+  margin-bottom: 48px;
+}
+@media (max-width: 960px) {
+  section.main div.text p {
+    font-size: 18px;
+    margin-bottom: 36px;
+  }
+}
+section.main div.text div.buttons {
+  display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 16px;
+}
+@media (max-width: 640px) {
+  section.main div.text div.buttons {
+    grid-gap: 8px;
+  }
+}
+section.main div.courses {
+  position: absolute;
+  right: var(--section-side-gap);
+  top: 0;
+  z-index: 9;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.35);
+  padding: 37px 23px;
+  border-radius: 30px;
+}
+@media (max-width: 640px) {
+  section.main div.courses {
+    display: none;
+  }
+}
+section.main div.courses h3 {
+  display: block;
+  width: 100%;
+  font-size: 32px;
+  color: #FF8001;
+  text-align: center;
+}
+section.main div.courses span {
+  display: block;
+  width: 100%;
+  color: #FF8001;
+  text-align: center;
+  margin-bottom: 28px;
+}
+section.main div.courses table thead td {
+  font-size: 18px;
+}
+section.main div.courses table td {
+  padding: 5px 10px;
+  text-align: right;
+  font-size: 21px;
+  opacity: 0.7;
+}
+section.main div.courses table td:first-child {
+  text-align: left;
+}
+
+section.services {
+  margin-top: var(--section-between-gap);
+  margin-bottom: var(--section-between-gap);
+}
+section.services h2 {
+  margin-bottom: 68px;
+}
+@media (max-width: 640px) {
+  section.services h2 {
+    margin-bottom: 34px;
+  }
+}
+section.services div.tabs_captions {
+  display: grid;
+  grid-template-columns: repeat(2, -webkit-max-content);
+  grid-template-columns: repeat(2, max-content);
+  grid-gap: 10px;
+  margin-bottom: 34px;
+}
+@media (max-width: 960px) {
+  section.services div.tabs_captions {
+    margin-bottom: 104px;
+  }
+}
+@media (max-width: 640px) {
+  section.services div.tabs_captions {
+    margin-bottom: 86px;
+  }
+}
+section.services div.tabs_captions div.tab_caption {
+  position: relative;
+  cursor: pointer;
+  padding: 15px 45px;
+  border-radius: 999px;
+  background-color: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  section.services div.tabs_captions div.tab_caption {
+    padding: 10px 20px;
+  }
+}
+section.services div.tabs_captions div.tab_caption:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#FF8A01), color-stop(98.44%, #FF4D01));
+  background: linear-gradient(90deg, #FF8A01 0%, #FF4D01 98.44%);
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+section.services div.tabs_captions div.tab_caption:hover {
+  background-color: #ebebeb;
+}
+section.services div.tabs_captions div.tab_caption.opened {
+  color: white;
+  pointer-events: none;
+}
+section.services div.tabs_captions div.tab_caption.opened::before {
+  opacity: 1;
+}
+section.services div.tabs_captions div.tab_caption span {
+  position: relative;
+}
+section.services div.tab_content {
+  position: relative;
+  display: none;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+@media (max-width: 960px) {
+  section.services div.tab_content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 640px) {
+  section.services div.tab_content {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+section.services div.tab_content.opened {
+  display: grid;
+}
+section.services a.service {
+  display: grid;
+  grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-rows: max-content 1fr max-content;
+  grid-gap: 16px;
+  padding: 40px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  background-color: white;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  position: relative;
+}
+section.services a.service:hover {
+  background-color: #FFEFE8;
+}
+section.services a.service:hover button {
+  background-color: black;
+  color: white;
+}
+section.services a.service:hover button svg path {
+  stroke: white;
+  fill: white;
+}
+section.services a.service > * {
+  position: relative;
+  z-index: 2;
+}
+section.services a.service p {
+  display: block;
+  font-size: 18px;
+  line-height: 1.3em;
+  opacity: 0.6;
+  margin-bottom: 120px;
+}
+section.services a.service button svg path {
+  -webkit-transition: fill 0.3s;
+  transition: fill 0.3s;
+}
+section.services a.service div.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+section.services a.service div.background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+section.services a.download {
+  position: absolute;
+  bottom: calc(100% + 34px);
+  right: 0;
+}
+@media (max-width: 960px) {
+  section.services a.download {
+    bottom: calc(100% + 16px);
+    right: unset;
+    left: 0;
+  }
+}
+
+section.about {
+  margin-top: var(--section-between-gap);
+  margin-bottom: var(--section-between-gap);
+}
+section.about div.sticky {
+  position: relative;
+  height: 100vh;
+  margin-bottom: var(--section-between-gap);
+}
+section.about div.sticky h2 {
+  top: 184px;
+  position: sticky;
+  scroll-margin-top: 184px;
+}
+section.about div.text {
+  display: grid;
+  grid-gap: 40px;
+  margin-bottom: 68px;
+}
+@media (max-width: 640px) {
+  section.about div.text {
+    grid-gap: 20px;
+    margin-bottom: 32px;
+  }
+}
+section.about div.text p {
+  display: block;
+  max-width: 480px;
+  font-size: 18px;
+  line-height: 1.3em;
+}
+section.about div.advantages {
+  counter-reset: list;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+@media (max-width: 640px) {
+  section.about div.advantages {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
+section.about div.advantages div.advantage {
+  position: relative;
+  counter-increment: list;
+  aspect-ratio: 2/1;
+  display: grid;
+  grid-template-rows: 1fr -webkit-max-content;
+  grid-template-rows: 1fr max-content;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 30px;
+}
+@media (max-width: 960px) {
+  section.about div.advantages div.advantage {
+    aspect-ratio: 1/1;
+  }
+}
+section.about div.advantages div.advantage::before {
+  content: counter(list) ".";
+  display: block;
+  font-size: 50px;
+  line-height: 1.3em;
+  opacity: 0.1;
+}
+section.about div.advantages div.advantage > * {
+  position: relative;
+  z-index: 2;
+}
+section.about div.advantages div.advantage span {
+  display: block;
+  font-size: 28px;
+  line-height: 1.15em;
+  max-width: 360px;
+}
+@media (max-width: 960px) {
+  section.about div.advantages div.advantage span {
+    font-size: 24px;
+  }
+}
+@media (max-width: 640px) {
+  section.about div.advantages div.advantage span {
+    font-size: 20px;
+  }
+}
+section.about div.advantages div.advantage div.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+section.about div.advantages div.advantage div.background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: right bottom;
+     object-position: right bottom;
+}
+
+section.online {
+  padding-top: var(--section-between-gap);
+  padding-bottom: var(--section-between-gap);
+  background-color: #272727;
+  color: white;
+}
+section.online div.text {
+  max-width: 65%;
+  position: relative;
+  display: grid;
+  grid-gap: 54px;
+  z-index: 2;
+}
+section.online div.buttons {
+  display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content;
+  grid-template-columns: max-content max-content;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 16px;
+}
+@media (max-width: 640px) {
+  section.online div.buttons {
+    grid-gap: 8px;
+  }
+}
+section.online div.buttons svg path {
+  fill: white;
+  stroke: white;
+}
+section.online div.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+section.online div.background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+section.contacts {
+  padding-top: var(--section-between-gap);
+  padding-bottom: var(--section-between-gap);
+  scroll-margin-top: 84px;
+}
+section.contacts div.container {
+  display: grid;
+  grid-gap: var(--section-between-gap);
+}
+section.contacts div.text {
+  display: grid;
+  grid-gap: 20px;
+}
+section.contacts div.text p {
+  font-size: 20px;
+  line-height: 1.3em;
+}
+section.contacts form {
+  display: grid;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px 78px;
+}
+@media (max-width: 960px) {
+  section.contacts form {
+    grid-gap: 20px 48px;
+  }
+}
+@media (max-width: 640px) {
+  section.contacts form {
+    grid-template-columns: 1fr;
+  }
+}
+section.contacts form div.order {
+  grid-column: 2/3;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  grid-gap: 24px;
+  margin-top: 15px;
+}
+@media (max-width: 960px) {
+  section.contacts form div.order {
+    grid-column: 1/3;
+  }
+}
+@media (max-width: 640px) {
+  section.contacts form div.order {
+    grid-column: 1 span;
+    grid-template-columns: 1fr;
+  }
+}
+section.contacts form div.order span {
+  font-size: 12px;
+  line-height: 1.2em;
+  opacity: 0.6;
+}
+@media (max-width: 640px) {
+  section.contacts form div.order span {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media (max-width: 640px) {
+  section.contacts form div.order button {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    justify-self: end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,93 @@
+header
+    color: white
+    background-color: rgba(39, 39, 39, .9)
+    padding-top: 20px
+    padding-bottom: 20px
+    position: sticky
+    z-index: 999
+    top: 0
+    transition: background-color .3s
+    backdrop-filter: blur(10px)
+    
+    
+    div.container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        grid-gap: 30px
+
+    a.logotype
+        img
+            width: 148px
+
+    div.additional
+        display: grid
+        grid-template-columns: max-content max-content
+        align-items: center
+        grid-gap: 34px
+        +screen(s)
+            display: none
+
+        a.visual
+            display: grid
+            align-items: center
+            grid-template-columns: max-content auto
+            grid-gap: 6px
+            opacity: .7
+            transition: opacity .2s
+            svg
+                path
+                    fill: white
+                    transition: fill .2s
+            &:hover
+                opacity: 1
+                svg
+                    path
+                        fill: #FF8A01
+
+        div.languages
+            display: grid
+            grid-auto-flow: column
+            grid-auto-columns: max-content
+            grid-gap: 14px
+            a
+                opacity: .6
+                transition: opacity .2s
+                &:hover
+                    opacity: 1
+                &.current
+                    opacity: 1
+                    pointer-events: none
+
+    menu
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        grid-gap: 40px
+        +screen(l)
+            display: none
+
+        a
+            opacity: .7
+            transition: opacity .2s
+            &:hover
+                opacity: 1
+
+    a.button
+        padding: 10px 20px
+        +screen(m)
+            display: none
+
+    img.menu
+        display: none
+        cursor: pointer
+        +screen(l)
+            display: block
+
+    &.transparent
+        background-color: transparent
+
+    &.index
+        menu
+            a:first-child
+                display: none

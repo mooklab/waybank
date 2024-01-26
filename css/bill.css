@@ -1,0 +1,122 @@
+@charset "UTF-8";
+:root {
+  --section-side-gap: 50px;
+  --section-between-gap: 120px;
+  --header-height: 84px;
+}
+
+@media (max-width: 960px) {
+  :root {
+    --section-side-gap: 30px;
+    --section-between-gap: 100px;
+    --header-height: 64px;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --section-side-gap: 20px;
+    --section-between-gap: 80px;
+  }
+}
+section.open {
+  font-size: 18px;
+  line-height: 1.25em;
+  margin-top: calc(var(--section-between-gap) * 0.5);
+  margin-bottom: calc(var(--section-between-gap) * 0.5);
+}
+@media (max-width: 960px) {
+  section.open {
+    font-size: 16px;
+  }
+}
+@media (max-width: 640px) {
+  section.open {
+    font-size: 15px;
+  }
+}
+section.open div.container {
+  display: grid;
+  grid-gap: 12px;
+}
+section.open h2 {
+  margin-bottom: 12px;
+}
+section.open strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  opacity: 0.4;
+}
+section.open ul {
+  display: grid;
+  grid-gap: 8px;
+}
+section.open ul li {
+  list-style: disc outside;
+  padding-left: 0.5em;
+  margin-left: 1em;
+}
+section.open ul li::marker {
+  content: "•";
+}
+
+section.close {
+  font-size: 18px;
+  line-height: 1.25em;
+  margin-top: calc(var(--section-between-gap) * 0.5);
+  margin-bottom: calc(var(--section-between-gap) * 0.5);
+}
+@media (max-width: 960px) {
+  section.close {
+    font-size: 16px;
+  }
+}
+@media (max-width: 640px) {
+  section.close {
+    font-size: 15px;
+  }
+}
+section.close div.container {
+  display: grid;
+  grid-gap: 12px;
+}
+section.close strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  opacity: 0.4;
+}
+section.close ul {
+  display: grid;
+  grid-gap: 8px;
+}
+section.close ul li {
+  position: relative;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  list-style: disc outside;
+  padding-left: 0.5em;
+  margin-left: 1em;
+}
+section.close ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: -18px;
+  height: 1px;
+  width: calc(100% + 18px);
+  background: -webkit-gradient(linear, left top, right top, from(#FF8A01), color-stop(98.44%, #FF4D01));
+  background: linear-gradient(90deg, #FF8A01 0%, #FF4D01 98.44%);
+}
+section.close ul li::marker {
+  content: "•";
+}
+section.close ul li:last-child::after {
+  display: none;
+}/*# sourceMappingURL=bill.css.map */

@@ -1,0 +1,43 @@
+dialog[data-modal-name=schedule]
+
+    div.container
+        width: 100%
+
+    div.row
+        display: grid
+        grid-template-columns: 1fr max-content
+        grid-gap: 32px
+        border-bottom: 1px solid rgba(0,0,0,.2)
+        padding-bottom: 24px
+        margin-bottom: 24px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 16px
+        &:last-child
+            border: unset
+            padding-bottom: unset
+            margin-bottom: unset
+
+    h3
+        font-size: 35px
+        margin-bottom: 64px
+        padding-right: 40px
+        +screen(s)
+            font-size: 30px
+            margin-bottom: 32px
+
+    div.table
+        span
+            display: block
+            opacity: .6
+
+        strong
+            font-size: 20px
+            font-weight: 500
+            line-height: 1.3em
+
+        ul
+            display: grid
+            grid-gap: 16px
+            +screen(s)
+                grid-gap: 8px

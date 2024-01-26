@@ -1,0 +1,120 @@
+section.services
+    margin-top: var(--section-between-gap)
+    margin-bottom: var(--section-between-gap)
+
+    h2
+        margin-bottom: 68px
+        +screen(s)
+            margin-bottom: 34px
+
+    div.tabs_captions
+        display: grid
+        grid-template-columns: repeat(2, max-content)
+        grid-gap: 10px
+        margin-bottom: 34px
+        +screen(m)
+            margin-bottom: calc(34px + 54px + 16px)
+        +screen(s)
+            margin-bottom: calc(16px + 54px + 16px)
+
+        div.tab_caption
+            position: relative
+            cursor: pointer
+            padding: 15px 45px
+            border-radius: 999px
+            background-color: white
+            transition: all .3s
+            overflow: hidden
+            +screen(s)
+                padding: 10px 20px
+            &:before
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 100%
+                background: linear-gradient(90deg, #FF8A01 0%, #FF4D01 98.44%)
+                opacity: 0
+                transition: opacity .4s
+            &:hover
+                background-color: #ebebeb
+            &.opened
+                color: white
+                pointer-events: none
+                &::before
+                    opacity: 1
+
+            span
+                position: relative
+
+    div.tab_content
+        position: relative
+        display: none
+        grid-template-columns: repeat(3, 1fr)
+        grid-gap: 20px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-gap: 10px
+        &.opened
+            display: grid
+
+    a.service
+        display: grid
+        grid-template-rows: max-content 1fr max-content
+        grid-gap: 16px
+        padding: 40px 30px
+        border: 1px solid rgba(0, 0, 0, 0.10)
+        border-radius: 16px
+        background-color: white
+        transition: background-color .3s
+        position: relative
+        &:hover
+            background-color: #FFEFE8
+
+            button
+                background-color: black
+                color: white
+                svg
+                    path
+                        stroke: white
+                        fill: white
+
+        & > *
+            position: relative
+            z-index: 2
+
+        p
+            display: block
+            font-size: 18px
+            line-height: 1.3em
+            opacity: .6
+            margin-bottom: 120px
+
+        button
+            // background-color: white
+            svg
+                path
+                    transition: fill .3s
+
+        div.background
+            position: absolute
+            width: 100%
+            height: 100%
+            z-index: 1
+            img
+                width: 100%
+                height: 100%
+                object-fit: contain
+                object-position: right bottom
+
+    a.download
+        position: absolute
+        bottom: calc(100% + 34px)
+        right: 0
+        +screen(m)
+            bottom: calc(100% + 16px)
+            right: unset
+            left: 0

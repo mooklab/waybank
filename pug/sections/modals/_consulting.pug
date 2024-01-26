@@ -1,0 +1,14 @@
+dialog(data-modal-name="consulting")
+    div.container
+        div(data-modal-close='').cross
+            include ../../../images/modal_cross.svg
+
+        div.text
+            h3(data-subtitle="Нужна консультация?") #[span.orange Оставьте заявку] на обратный звонок
+            p Ваш персональный менеджер перезвонит вам в ближайшее время
+
+        form
+            input(type="text", placeholder="Как к вам обращаться?", required)
+            input(type="phone", placeholder="+7 999 999 99 99", required, data-phone-pattern='')
+            button.black Отправить заявку
+            span.policy Нажимая кнопку “отправить заявку” вы соглашаетесь с политикой конфиденциальности и пользовательским соглашением 

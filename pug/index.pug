@@ -1,0 +1,21 @@
+extends common/_layout.pug
+
+block links
+    link(rel="stylesheet", href="css/index.css")
+
+block content
+    include sections/index/_main.pug
+    include sections/index/_services.pug
+    include sections/index/_about.pug
+    include sections/index/_online.pug
+    include sections/index/_contacts.pug
+
+    script.
+        
+        header = document.querySelector('header')
+        header.classList.add('transparent')
+        header.classList.add('index')
+        window.addEventListener('scroll', event => {
+            this.scrollY > 10 ? header.classList.remove('transparent') : header.classList.add('transparent')
+        })
+        

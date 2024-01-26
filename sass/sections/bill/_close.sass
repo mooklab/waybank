@@ -1,0 +1,48 @@
+section.close
+    font-size: 18px
+    line-height: 1.25em
+    margin-top: calc(var(--section-between-gap) * .5)
+    margin-bottom: calc(var(--section-between-gap) * .5)
+    +screen(m)
+        font-size: 16px
+    +screen(s)
+        font-size: 15px
+
+    div.container
+        display: grid
+        grid-gap: 12px
+
+    strong
+        display: block
+        font-size: 14px
+        font-weight: 700
+        letter-spacing: 1.4px
+        text-transform: uppercase
+        margin-top: 8px
+        opacity: .4
+
+    ul
+        display: grid
+        grid-gap: 8px
+        li
+            position: relative
+            padding-top: 24px
+            padding-bottom: 24px
+            list-style: disc outside
+            padding-left: .5em
+            margin-left: 1em
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: -18px
+                height: 1px
+                width: calc(100% + 18px)
+                background: linear-gradient(90deg, #FF8A01 0%, #FF4D01 98.44%)
+            
+            &::marker
+                content: '\2022 '
+
+            &:last-child
+                &::after
+                    display: none

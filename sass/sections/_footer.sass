@@ -1,0 +1,101 @@
+footer
+    background-color: black
+    color: white
+    padding-top: 80px
+    padding-bottom: 80px
+    font-size: 14px
+    line-height: 1.2em
+    +screen(s)
+        padding-top: 60px
+        padding-bottom: 60px
+
+    div.container
+        display: grid
+        align-content: start
+        grid-template-columns: max-content 4fr 3fr 3fr
+        grid-template-rows: max-content max-content 1fr
+        grid-template-areas: 'Logotype Requisite Documents Contacts' 'Logotype Requisite Tarrifs Policies' 'Logotype Requisite Forms Copyright'
+        grid-gap: 48px 74px
+        +screen(m)
+            grid-template-columns: max-content 1fr 1fr
+            grid-template-areas: 'Logotype Contacts Documents' 'Logotype Tarrifs Documents' 'Logotype Forms Policies' 'Logotype Requisite Requisite' 'Logotpe Copyright Copyright'
+            grid-gap: 48px
+        +screen(s)
+            grid-template-columns: 1fr
+            grid-template-areas: 'Logotype' 'Contacts' 'Documents' 'Tarrifs' 'Forms' 'Policies' 'Requisite' 'Copyright'
+            grid-gap: 36px
+
+    a.logotype
+        grid-area: Logotype
+        display: block
+        width: 148px
+        img
+            width: 100%
+
+    a:hover
+        opacity: .7
+
+    h4
+        opacity: .4
+        font-weight: 700
+        letter-spacing: 2.8px
+        text-transform: uppercase
+        padding-bottom: 4px
+
+    div.requisite
+        grid-area: Requisite
+        display: grid
+        grid-gap: 16px
+        p
+            opacity: .6
+
+    menu.documents, menu.tarrifs, menu.forms, div.policies
+        display: grid
+        align-content: start
+        grid-gap: 16px
+        +screen(m)
+            grid-gap: 12px
+        +screen(s)
+            grid-gap: 8px
+
+    menu.documents
+        grid-area: Documents
+
+    menu.tarrifs
+        grid-area: Tarrifs
+
+    menu.forms
+        grid-area: Forms
+
+    div.policies
+        grid-area: Policies
+
+    div.contacts
+        grid-area: Contacts
+        display: grid
+        align-content: start
+        grid-gap: 16px
+
+        div
+            display: grid
+            grid-gap: 2px
+
+        span
+            font-size: 10px
+            opacity: .4
+
+        strong
+            font-size: 16px
+            font-weight: 400
+
+        a
+            font-size: 16px
+            font-weight: 700
+
+    
+
+    span.copyright
+        grid-area: Copyright
+        align-self: end
+        font-size: 12px
+        opacity: .6

@@ -1,0 +1,12 @@
+dialog(data-modal-name="client")
+    div.container
+        div(data-modal-close='').cross
+            include ../../../images/modal_cross.svg
+        h3(data-subtitle="Хотите стать клиентом?") #[span.orange Оставьте заявку] и ваш персональный менеджер свяжется с вами в ближайшее время
+
+        form
+            input(type="text", placeholder="Как к вам обращаться?", required)
+            input(type="phone", placeholder="+7 999 999 99 99", required, data-phone-pattern='')
+            input(type="email", placeholder="E-mail", required)
+            button.black Отправить заявку
+            span.policy Нажимая кнопку “отправить заявку” вы соглашаетесь с политикой конфиденциальности и пользовательским соглашением 

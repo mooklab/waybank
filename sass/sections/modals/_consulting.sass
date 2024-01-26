@@ -1,0 +1,63 @@
+dialog[data-modal-name=consulting]
+
+    div.container
+        display: grid
+        grid-gap: 64px
+        +screen(s)
+            grid-gap: 32px
+
+    div.text
+        display: grid
+        grid-gap: 20px
+
+        h3
+            font-size: 35px
+            line-height: 1.2em
+            +screen(s)
+                font-size: 24px
+
+        p
+            font-size: 20px
+            +screen(s)
+                font-size: 16px
+        
+    form
+        display: grid
+        align-items: end
+        grid-template-columns: repeat(2, 1fr) max-content
+        grid-gap: 16px
+        +screen(m)
+            grid-template-columns: repeat(2, 1fr)
+        +screen(s)
+            grid-template-columns: 1fr
+
+        input
+            font-size: 16px
+            padding-top: 15px
+            padding-bottom: 15px
+            border-bottom: 1px solid black
+
+        button
+            justify-self: end
+            justify-content: center
+            +screen(m)
+                order: 9
+            +screen(s)
+                width: 100%
+                margin-top: 16px
+                order: unset
+
+        span.policy
+            margin-top: 16px
+            grid-column: 3 span
+            font-size: 12px
+            line-height: 1.2em
+            opacity: .4
+            +screen(m)
+                grid-column: 1 / 2
+                margin-top: unset
+                align-self: center
+                order: 1
+            +screen(s)
+                margin-top: 16px
+                order: unset

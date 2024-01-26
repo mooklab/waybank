@@ -1,0 +1,25 @@
+header
+    div.container
+
+        a.logotype(href="index.html")
+            img(src="images/logotype_white.svg", alt="")
+
+        div.additional
+            a.visual
+                include ../../images/eye.svg
+                span Версия
+            div.languages
+                a(href="/ru").current RU
+                a(href="/en") EN
+
+        menu
+            a(href="index.html") Главная
+            a(href="index.html#services") Сервисы и продукты
+            a(href="index.html#about") О банке
+            a(href="index.html#contacts") Контакты
+
+        a(href="https://ibank.rentabank.ru/ibank2/#/", target="blank").button.white
+            span Перейти в онлайн-банк
+            img(src="images/button_arrow.svg", alt="")
+
+        img(src="images/menu.svg", alt="", data-modal-target="menu").menu

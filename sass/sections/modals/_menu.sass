@@ -1,0 +1,70 @@
+dialog[data-modal-name=menu]
+    color: white
+    justify-content: end
+    padding: unset
+
+    div.container
+        height: 100%
+        background-color: #272727
+        border-top-right-radius: unset
+        border-bottom-right-radius: unset
+        display: grid
+        grid-template-rows: max-content max-content 1fr max-content max-content
+        align-content: start
+        grid-gap: 16px
+        padding-top: 30px
+
+        div.cross
+            top: 16px
+            right: 16px
+            transform: unset
+            svg
+                path
+                    stroke: white
+
+    a.logotype
+        img
+            width: 148px
+
+    a.visual
+        display: grid
+        align-items: center
+        align-self: start
+        grid-template-columns: max-content auto
+        grid-gap: 6px
+        opacity: .7
+        transition: opacity .2s
+        svg
+            path
+                fill: white
+                transition: fill .2s
+        &:hover
+            opacity: 1
+            svg
+                path
+                    fill: #FF8A01
+
+    div.languages
+        display: grid
+        grid-auto-flow: column
+        grid-auto-columns: max-content
+        grid-gap: 14px
+        a
+            opacity: .6
+            transition: opacity .2s
+            &:hover
+                opacity: 1
+            &.current
+                opacity: 1
+                pointer-events: none
+
+    menu
+        display: grid
+        grid-auto-flow: row
+        grid-auto-columns: max-content
+        grid-gap: 12px
+        font-size: 18px
+        margin-top: 16px
+        margin-bottom: 16px
+        +screen(s)
+            font-size: 16px
