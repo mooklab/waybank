@@ -58,11 +58,15 @@ section.main div.text {
 }
 section.main div.text h1 {
   margin-bottom: 32px;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
 }
 section.main div.text p {
   font-size: 24px;
   line-height: 1.25em;
   margin-bottom: 48px;
+  -webkit-transition-delay: 450ms;
+          transition-delay: 450ms;
 }
 @media (max-width: 960px) {
   section.main div.text p {
@@ -78,6 +82,8 @@ section.main div.text div.buttons {
       -ms-flex-align: center;
           align-items: center;
   grid-gap: 16px;
+  -webkit-transition-delay: 600ms;
+          transition-delay: 600ms;
 }
 @media (max-width: 640px) {
   section.main div.text div.buttons {
@@ -133,6 +139,8 @@ section.services {
 }
 section.services h2 {
   margin-bottom: 68px;
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
 }
 @media (max-width: 640px) {
   section.services h2 {
@@ -308,11 +316,17 @@ section.about div.text {
     margin-bottom: 32px;
   }
 }
+section.about div.text h2 {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
 section.about div.text p {
   display: block;
   max-width: 480px;
   font-size: 18px;
   line-height: 1.3em;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
 }
 section.about div.advantages {
   counter-reset: list;
@@ -446,9 +460,15 @@ section.contacts div.text {
   display: grid;
   grid-gap: 20px;
 }
+section.contacts div.text h2 {
+  -webkit-transition-delay: 150ms;
+          transition-delay: 150ms;
+}
 section.contacts div.text p {
   font-size: 20px;
   line-height: 1.3em;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
 }
 section.contacts form {
   display: grid;

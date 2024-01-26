@@ -146,3 +146,14 @@ button, a.button
         &:hover
             border-color: rgba(0,0,0,1)
 
+
+.animate
+    opacity: 0
+    filter: blur(px)
+    transform: translateY(25%)
+    transition: all 1s
+
+.animate.start
+    opacity: 1
+    filter: blur(0)
+    transform: translateY(0%)
