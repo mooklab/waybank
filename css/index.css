@@ -399,6 +399,23 @@ section.about div.advantages div.advantage div.background img {
      object-position: right bottom;
 }
 
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 section.online {
   padding-top: var(--section-between-gap);
   padding-bottom: var(--section-between-gap);

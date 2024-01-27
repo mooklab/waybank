@@ -1,0 +1,105 @@
+section.documents
+    margin-top: calc(var(--section-between-gap) * .5)
+    margin-bottom: calc(var(--section-between-gap) * .5)
+    +screen(m)
+        font-size: 16px
+    +screen(s)
+        font-size: 15px
+
+    div.container
+        display: grid
+        grid-gap: 40px
+
+    strong
+        display: block
+        font-size: 14px
+        font-weight: 700
+        letter-spacing: 1.4px
+        text-transform: uppercase
+        margin-top: 8px
+        opacity: .4
+
+    ul
+        display: grid 
+        padding-top: 20px
+        padding-bottom: 20px
+        &:first-child
+            padding-top: unset
+        &:last-child
+            padding-bottom: unset
+        li
+            list-style: disc outside
+            padding-left: .5em
+            margin-left: 1em
+            &::marker
+                content: '\2022 '
+
+    div.document
+        display: grid
+        align-items: center
+        grid-template-columns: 1fr max-content
+        grid-gap: 28px
+
+    div.title
+        display: grid
+        grid-gap: 20px
+
+        h1
+            font-size: 48px
+            font-weight: 400
+            line-height: 1em
+            transition-delay: 150ms
+            +screen(s)
+                font-size: 32px
+
+        span
+            max-width: 658px
+            line-height: 1.3em
+            transition-delay: 500ms
+
+    div.table
+        counter-reset: list
+        div.row
+            position: relative
+            padding-top: 40px
+            padding-bottom: 40px
+            display: grid
+            align-items: center
+            grid-template-columns: repeat(2, 1fr)
+            grid-gap: 20px 48px
+            +screen(s)
+                grid-template-columns: 1fr
+                padding-top: 20px
+                padding-bottom: 20px
+
+            &:not(:first-child)
+                counter-increment: list
+            &:first-child
+                padding-top: 20px
+                padding-bottom: 20px
+                +screen(s)
+                    display: none
+            &:has(strong)
+                padding-top: 20px
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 1px
+                background: linear-gradient(90deg, #FF8A01 0%, #FF4D01 98.44%)
+        p.list
+            display: block
+            position: relative
+            margin-left: 24px
+            font-size: 18px
+
+            &::before
+                content: counter(list) '. '
+                position: absolute
+                top: 0
+                left: -25px
+
+    div.text
+        max-width: 771px

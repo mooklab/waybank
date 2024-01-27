@@ -6,6 +6,10 @@ section.about
         position: relative
         height: 100vh
         margin-bottom: var(--section-between-gap)
+        // animation: fade-in linear
+        // animation-fill-mode: both
+        // animation-timeline: view()
+        // animation-range: 0% 100%
         h2
             top: 184px
             position: sticky
@@ -79,3 +83,10 @@ section.about
                     height: 100%
                     object-fit: contain
                     object-position: right bottom
+
+@keyframes fade-in
+    0%
+        opacity: 1
+    100%
+        opacity: 0
+        

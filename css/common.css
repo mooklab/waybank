@@ -363,6 +363,30 @@ button.hollow.black:hover, a.button.hollow.black:hover {
           transform: translateY(0%);
 }
 
+a.download {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  border-radius: 999px;
+  border: 1px solid black;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+a.download svg path {
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+a.download:hover {
+  background-color: black;
+}
+a.download:hover svg path {
+  fill: white;
+}
+
 html, body {
   font-family: "Gilroy", sans-serif;
   font-size: 16px;

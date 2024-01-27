@@ -1,0 +1,78 @@
+@charset "UTF-8";
+:root {
+  --section-side-gap: 50px;
+  --section-between-gap: 120px;
+  --header-height: 84px;
+}
+
+@media (max-width: 960px) {
+  :root {
+    --section-side-gap: 30px;
+    --section-between-gap: 100px;
+    --header-height: 64px;
+  }
+}
+@media (max-width: 640px) {
+  :root {
+    --section-side-gap: 20px;
+    --section-between-gap: 80px;
+  }
+}
+section.page {
+  margin-top: calc(var(--section-between-gap) * 0.5);
+  margin-bottom: calc(var(--section-between-gap) * 0.5);
+  font-size: 18px;
+  line-height: 1.3em;
+}
+@media (max-width: 960px) {
+  section.page {
+    font-size: 16px;
+  }
+}
+@media (max-width: 640px) {
+  section.page {
+    font-size: 15px;
+  }
+}
+section.page div.container {
+  display: grid;
+  grid-gap: 20px;
+}
+section.page h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+@media (max-width: 640px) {
+  section.page h1 {
+    font-size: 32px;
+  }
+}
+section.page h2 {
+  font-size: 32px;
+  margin-top: 20px;
+}
+@media (max-width: 640px) {
+  section.page h2 {
+    font-size: 24px;
+  }
+}
+section.page a {
+  color: #5564E9;
+}
+section.page a:hover {
+  color: #2d3479;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+section.page ul {
+  display: grid;
+  grid-gap: 8px;
+}
+section.page ul li {
+  list-style: disc outside;
+  padding-left: 0.5em;
+  margin-left: 1em;
+}
+section.page ul li::marker {
+  content: "•";
+}/*# sourceMappingURL=page.css.map */
