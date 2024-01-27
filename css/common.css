@@ -542,6 +542,8 @@ header img.menu {
 }
 header.transparent {
   background-color: transparent;
+  -webkit-backdrop-filter: unset;
+          backdrop-filter: unset;
 }
 header.index menu a:first-child {
   display: none;
