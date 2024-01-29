@@ -278,13 +278,13 @@ section.services a.service div.background img {
   -o-object-position: right bottom;
      object-position: right bottom;
 }
-section.services a.download {
+section.services a.download_services {
   position: absolute;
   bottom: calc(100% + 34px);
   right: 0;
 }
 @media (max-width: 960px) {
-  section.services a.download {
+  section.services a.download_services {
     bottom: calc(100% + 16px);
     right: unset;
     left: 0;
